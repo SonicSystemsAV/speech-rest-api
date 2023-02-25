@@ -51,9 +51,7 @@ Example:
 }
 ```
 
-
 The response is an audio file in WAV format containing the generated speech.
-
 
 Here's an example curl command that generates speech from a list of input sentences:
 
@@ -67,14 +65,11 @@ curl -X POST \
 
 This curl command sends a JSON payload with a list of three input sentences to the /tts endpoint, and saves the resulting audio file to output.wav.
 
-
 This endpoint transcribes audio files using the Whisper model.
-
 
 ```bash
 POST http://localhost:80/transcribe
 ```
-
 
 The request body must be a form data object containing an audio file.
 
@@ -83,7 +78,6 @@ Example:
 ```form
 audio=@path/to/your/audio/file.wav
 ```
-
 
 The response is a JSON object containing the detected language and the transcribed text.
 
@@ -96,10 +90,9 @@ Example:
 }
 ```
 
-
 Here's an example curl command that transcribes an audio file:
 
-```css 
+```css
 curl -X POST \
   -F "audio=@path/to/your/audio/file.wav" \
   http://localhost:80/transcribe
